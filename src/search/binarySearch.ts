@@ -10,9 +10,9 @@ export default function binarySearch<T>(x: T, coll: T[]): number {
   let [l, r] = [0, coll.length - 1];
 
   while (l <= r) {
-    const m = Math.floor((l + r) / 2);
+    const m = Math.floor(l + (r - l) / 2);
 
-    if (coll[m] === x) {
+    if (x === coll[m]) {
       return m;
     } else if (x > coll[m]) {
       l = m + 1;
