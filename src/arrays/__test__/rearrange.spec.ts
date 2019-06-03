@@ -17,6 +17,6 @@ test("rearrange", () => {
 
   forEach((testCase) => {
     rearrange(testCase.array, testCase.index),
-    expect(testCase.result).toEqual(testCase.array);
+      expect(testCase.result).toEqual(testCase.array);
   }, testCases);
 });

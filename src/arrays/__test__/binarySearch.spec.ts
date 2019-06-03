@@ -36,10 +36,8 @@ test("binarySearch", () => {
   ];
 
   forEach((testCase) => {
-    expect(testCase.result)
-      .toEqual(binarySearch(
-        testCase.input,
-        testCase.item,
-      ));
+    expect(testCase.result).toEqual(
+      binarySearch(testCase.input, testCase.item),
+    );
   }, testCases);
 });

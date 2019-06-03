@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "lint": "tslint --project ./",
+    "lint:fix": "tslint --project ./ --fix",
     "test": "jest",
     "test:watch": "jest --watch"
   },
