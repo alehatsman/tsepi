@@ -1,4 +1,4 @@
-type Callback<T> = (x: T, i: number) => boolean | undefined;
+type Callback<T> = (x: T, i: number) => boolean | undefined | void;
 
 /**
  * Iterates over collection and invokes callback for each element.
