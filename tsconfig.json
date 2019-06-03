@@ -1,7 +1,14 @@
 {
     "compilerOptions": {
-        "baseUrl": "./src",
+        "baseUrl": "./",
         "outDir": "./dist/",
+
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        },
+
         "sourceMap": true,
 
         "strict": true,

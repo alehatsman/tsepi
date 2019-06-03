@@ -1,4 +1,4 @@
-import forEach from "./forEach";
+import forEach from "@/std/forEach";
 
 test("forEach", () => {
   const mockFn = jest.fn((x) => x);

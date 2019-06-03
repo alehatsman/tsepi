@@ -1,4 +1,4 @@
-import { swap } from "../std";
+import { swap } from "@/std";
 
 /**
  * Rearranges elements such that all elemets

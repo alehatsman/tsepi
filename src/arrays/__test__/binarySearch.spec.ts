@@ -1,5 +1,5 @@
-import { forEach } from "../std";
-import binarySearch from "./binarySearch";
+import binarySearch from "@/arrays/binarySearch";
+import { forEach } from "@/std";
 
 test("binarySearch", () => {
   const testCases = [

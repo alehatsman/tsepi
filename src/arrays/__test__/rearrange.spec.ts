@@ -1,5 +1,5 @@
-import { forEach } from "../std";
-import rearrange from "./rearrange";
+import rearrange from "@/arrays/rearrange";
+import { forEach } from "@/std";
 
 test("rearrange", () => {
   const testCases = [

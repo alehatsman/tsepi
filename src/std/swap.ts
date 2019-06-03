@@ -4,4 +4,4 @@ function swap<T>(array: T[], i: number, j: number): void {
   array[j] = temp;
 }
 
-export default swap
+export default swap;

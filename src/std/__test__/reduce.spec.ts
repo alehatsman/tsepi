@@ -1,5 +1,5 @@
-import forEach from "./forEach";
-import reduce from "./reduce";
+import forEach from "@/std/forEach";
+import reduce from "@/std/reduce";
 
 test("reduce", () => {
   const testCases = [

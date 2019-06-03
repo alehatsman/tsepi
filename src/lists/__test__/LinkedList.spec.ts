@@ -1,5 +1,5 @@
-import LinkedList from "./LinkedList";
-import LNode from "./Node";
+import LinkedList from "@/lists/LinkedList";
+import LNode from "@/lists/Node";
 
 describe("LinkedList", () => {
   test("toArray", () => {

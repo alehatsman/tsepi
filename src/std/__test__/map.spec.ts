@@ -1,4 +1,4 @@
-import map from "./map";
+import map from "@/std/map";
 
 test("map", () => {
   const testCases = [
