@@ -139,22 +139,47 @@ export default class LinkedList<T> {
     return current;
   }
 
-  /**
-   * returns array with values from list
-   *
-   * Performance:
-   * Time: O(N)
-   * Space: O(N)
-   */
   public toArray(): T[] {
-    let current = this.head;
-    const res: T[] = [];
-
-    while (current) {
-      res.push(current.value);
-      current = current.next;
+    if (!this.head) {
+      return [];
     }
-
-    return res;
+    return toArray(this.head);
   }
+}
+
+/**
+ * returns linkedlist created from array
+ *
+ * Performance:
+ * Time: O(N)
+ * Space: O(N)
+ */
+export function fromArray<T>(arr: T[]): LinkedList<T> {
+  const ll = new LinkedList<T>();
+
+  for (let i = arr.length - 1; i >= 0; i -= 1) {
+    const v = arr[i];
+    ll.prepend(v);
+  }
+
+  return ll;
+}
+
+/**
+ * returns array with values from list
+ *
+ * Performance:
+ * Time: O(N)
+ * Space: O(N)
+ */
+export function toArray<T>(head: LNode<T>): T[] {
+  const res: T[] = [];
+
+  let current: LNode<T> | undefined = head;
+  while (current) {
+    res.push(current.value);
+    current = current.next;
+  }
+
+  return res;
 }

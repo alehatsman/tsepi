@@ -1,4 +1,4 @@
-import LinkedList from "@/lists/LinkedList";
+import LinkedList, { fromArray } from "@/lists/LinkedList";
 import LNode from "@/lists/Node";
 
 describe("LinkedList", () => {
@@ -80,4 +80,12 @@ describe("LinkedList", () => {
     expect(3).toEqual(n2.value);
     done();
   });
+});
+
+test("fromArray", () => {
+  const ll = fromArray([1, 2, 3]);
+
+  if (ll.head) {
+    expect(ll.head.value).toBe(1);
+  }
 });
