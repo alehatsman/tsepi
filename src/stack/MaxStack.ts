@@ -1,5 +1,13 @@
 import LinkedList from "@/lists/LinkedList";
 
+/**
+ * MaxStack implementation using linked lists.
+ * Supports max operation. Uses second linked list to store
+ * max value for current value.
+ *
+ * Performance:
+ * Space: O(2N)
+ */
 export default class MaxStack<T> {
   private ll: LinkedList<T>;
   private ml: LinkedList<T>;

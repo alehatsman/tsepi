@@ -2,6 +2,10 @@
  * parity - counts number of bits which are 1s.
  * If the number is odd than it returns 1
  * otherwise returns 0.
+ *
+ * Performance:
+ * Time: O(N) where N number of bits
+ * Space: O(1)
  */
 function parity(x: number): number {
   let i = x;

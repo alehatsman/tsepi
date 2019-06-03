@@ -1,5 +1,12 @@
 import LNode from "./Node";
 
+/**
+ * Merges two sorted linked lists and creates a new linked list.
+ *
+ * Performance:
+ * Time: O(N)
+ * Space: O(N)
+ */
 function mergeSorted<T>(head1: LNode<T>, head2: LNode<T>): LNode<T> {
   let cur1: LNode<T> | undefined = head1;
   let cur2: LNode<T> | undefined = head2;
