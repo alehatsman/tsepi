@@ -1,14 +1,13 @@
-import { forEach } from "@/std";
-
-type Pred<T> = (x: T) => boolean;
+type Pred<T> = (x: T, i: number) => boolean;
 
 function filter<T>(pred: Pred<T>, coll: T[]): T[] {
   const res = [] as T[];
-  forEach((x) => {
-    if (pred(x)) {
+  for (let i = 0; i < coll.length; i += 1) {
+    const x = coll[i];
+    if (pred(x, i)) {
       res.push(x);
     }
-  }, coll);
+  }
   return res;
 }
 
