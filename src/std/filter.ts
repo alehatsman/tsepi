@@ -1,4 +1,4 @@
-type Iteratee<T> = (x: T, i: number) => boolean;
+type Iteratee<T> = (x: T, i: number) => boolean
 
 /**
  * Iterates over collection, returning an array of all elements
@@ -9,14 +9,14 @@ type Iteratee<T> = (x: T, i: number) => boolean;
  * @returns coll - The new collection.
  */
 function filter<T>(iteratee: Iteratee<T>, coll: T[]): T[] {
-  const res = [] as T[];
+  const res = [] as T[]
   for (let i = 0; i < coll.length; i += 1) {
-    const x = coll[i];
+    const x = coll[i]
     if (iteratee(x, i)) {
-      res.push(x);
+      res.push(x)
     }
   }
-  return res;
+  return res
 }
 
-export default filter;
+export default filter

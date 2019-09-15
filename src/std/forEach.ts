@@ -1,4 +1,4 @@
-type Iteratee<T> = (x: T, i: number) => boolean | undefined | void;
+type Iteratee<T> = (x: T, i: number) => boolean | undefined | void
 
 /**
  * Iterates over collection and invokes iteratee for each element.
@@ -11,9 +11,9 @@ type Iteratee<T> = (x: T, i: number) => boolean | undefined | void;
  */
 export default function forEAch<A>(iteratee: Iteratee<A>, coll: A[]): void {
   for (let i = 0; i < coll.length; i += 1) {
-    const shouldStop = iteratee(coll[i], i);
+    const shouldStop = iteratee(coll[i], i)
     if (shouldStop === false) {
-      break;
+      break
     }
   }
 }

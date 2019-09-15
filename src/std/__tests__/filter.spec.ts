@@ -1,7 +1,7 @@
-import { forEach } from "@/std";
-import filter from "@/std/filter";
+import { forEach } from '@/std'
+import filter from '@/std/filter'
 
-test("filter", () => {
+test('filter', () => {
   const testCases = [
     {
       coll: [],
@@ -18,9 +18,9 @@ test("filter", () => {
       pred: (x: number) => x % 2 !== 0,
       res: [1, 3],
     },
-  ];
+  ]
 
   forEach(({ coll, pred, res }) => {
-    expect(filter(pred, coll)).toEqual(res);
-  }, testCases);
-});
+    expect(filter(pred, coll)).toEqual(res)
+  }, testCases)
+})

@@ -1,7 +1,7 @@
-import binarySearch from "@/arrays/binarySearch";
-import { forEach } from "@/std";
+import binarySearch from '@/arrays/binarySearch'
+import { forEach } from '@/std'
 
-test("binarySearch", () => {
+test('binarySearch', () => {
   const testCases = [
     {
       input: [],
@@ -33,11 +33,11 @@ test("binarySearch", () => {
       item: 3,
       result: 2,
     },
-  ];
+  ]
 
   forEach((testCase) => {
     expect(testCase.result).toEqual(
       binarySearch(testCase.input, testCase.item),
-    );
-  }, testCases);
-});
+    )
+  }, testCases)
+})

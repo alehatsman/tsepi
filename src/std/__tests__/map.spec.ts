@@ -1,6 +1,6 @@
-import map from "@/std/map";
+import map from '@/std/map'
 
-test("map", () => {
+test('map', () => {
   const testCases = [
     {
       coll: [1, 2, 3],
@@ -12,9 +12,9 @@ test("map", () => {
       func: (x: number) => x * x,
       res: [1, 4, 9],
     },
-  ];
+  ]
 
   testCases.forEach((testCase) => {
-    expect(testCase.res).toEqual(map(testCase.func, testCase.coll));
-  });
-});
+    expect(testCase.res).toEqual(map(testCase.func, testCase.coll))
+  })
+})

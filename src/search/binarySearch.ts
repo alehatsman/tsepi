@@ -7,19 +7,19 @@
  * Space: O(1)
  */
 export default function binarySearch<T>(x: T, coll: T[]): number {
-  let [l, r] = [0, coll.length - 1];
+  let [l, r] = [0, coll.length - 1]
 
   while (l <= r) {
-    const m = Math.floor(l + (r - l) / 2);
+    const m = Math.floor(l + (r - l) / 2)
 
     if (x === coll[m]) {
-      return m;
+      return m
     } else if (x > coll[m]) {
-      l = m + 1;
+      l = m + 1
     } else {
-      r = m - 1;
+      r = m - 1
     }
   }
 
-  return -1;
+  return -1
 }

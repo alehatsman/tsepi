@@ -1,4 +1,4 @@
-type Iteratee<A, B> = (x: A, i: number) => B;
+type Iteratee<A, B> = (x: A, i: number) => B
 
 /**
  * Creates an array of values by invoking provided function on each
@@ -11,10 +11,10 @@ type Iteratee<A, B> = (x: A, i: number) => B;
  * @returns collection - collection with transformed values.
  */
 export default function map<A, B>(iteratee: Iteratee<A, B>, coll: A[]): B[] {
-  const result: B[] = [];
+  const result: B[] = []
   for (let i = 0; i < coll.length; i += 1) {
-    const x = coll[i];
-    result.push(iteratee(x, i));
+    const x = coll[i]
+    result.push(iteratee(x, i))
   }
-  return result;
+  return result
 }

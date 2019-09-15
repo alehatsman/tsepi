@@ -1,4 +1,4 @@
-import LinkedList from "@/lists/LinkedList";
+import LinkedList from '@/lists/LinkedList'
 
 /**
  * Simple stack implementation using linked lists.
@@ -6,10 +6,10 @@ import LinkedList from "@/lists/LinkedList";
  * Space: O(N)
  */
 export default class Stack<T> {
-  private ll: LinkedList<T>;
+  private ll: LinkedList<T>
 
   constructor() {
-    this.ll = new LinkedList();
+    this.ll = new LinkedList()
   }
 
   /**
@@ -19,7 +19,7 @@ export default class Stack<T> {
    * Space: O(1)
    */
   public push(value: T) {
-    this.ll.prepend(value);
+    this.ll.prepend(value)
   }
 
   /**
@@ -30,11 +30,11 @@ export default class Stack<T> {
    */
   public pop(): T {
     if (!this.ll.head) {
-      throw new Error("StackIsEmptyError");
+      throw new Error('StackIsEmptyError')
     }
 
-    const value = this.ll.head.value;
-    this.ll.remove(0);
-    return value;
+    const value = this.ll.head.value
+    this.ll.remove(0)
+    return value
   }
 }

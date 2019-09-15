@@ -1,7 +1,7 @@
-import LNode from "./Node";
+import LNode from './Node'
 
 export default class LinkedList<T> {
-  public head?: LNode<T>;
+  public head?: LNode<T>
 
   /**
    * inserts value in position.
@@ -14,29 +14,29 @@ export default class LinkedList<T> {
    * Space: O(1)
    */
   public insert(value: T, position: number) {
-    const newNode = new LNode(value);
+    const newNode = new LNode(value)
 
     if (position === 0) {
-      newNode.next = this.head;
-      this.head = newNode;
-      return;
+      newNode.next = this.head
+      this.head = newNode
+      return
     }
 
     if (!this.head) {
-      throw new Error("index out of range error");
+      throw new Error('index out of range error')
     }
 
-    let i = 0;
-    let current: LNode<T> | undefined = this.head;
-    let prev: LNode<T> = current;
+    let i = 0
+    let current: LNode<T> | undefined = this.head
+    let prev: LNode<T> = current
     while (current && i < position) {
-      i += 1;
-      prev = current;
-      current = current.next;
+      i += 1
+      prev = current
+      current = current.next
     }
 
-    prev.next = newNode;
-    newNode.next = current;
+    prev.next = newNode
+    newNode.next = current
   }
 
   /**
@@ -49,7 +49,7 @@ export default class LinkedList<T> {
    * Space: O(1)
    */
   public prepend(value: T) {
-    this.insert(value, 0);
+    this.insert(value, 0)
   }
 
   /**
@@ -62,28 +62,28 @@ export default class LinkedList<T> {
    * Space: O(1)
    */
   public append(value: T) {
-    const newNode = new LNode(value);
-    const lastNode = this.last();
+    const newNode = new LNode(value)
+    const lastNode = this.last()
     if (!lastNode) {
-      this.head = newNode;
-      return;
+      this.head = newNode
+      return
     }
-    lastNode.next = newNode;
+    lastNode.next = newNode
   }
 
   public remove(position: number) {
     if (!this.head) {
-      throw new Error("No head");
+      throw new Error('No head')
     }
 
     if (position === 0) {
-      this.head = this.head.next;
-      return;
+      this.head = this.head.next
+      return
     }
 
-    const node = this.index(position);
+    const node = this.index(position)
     if (node && node.next) {
-      node.next = node.next.next;
+      node.next = node.next.next
     }
   }
 
@@ -98,24 +98,24 @@ export default class LinkedList<T> {
    */
   public index(position: number): LNode<T> | undefined {
     if (position === 0) {
-      return this.head;
+      return this.head
     }
 
-    let i = 0;
-    let current = this.head;
+    let i = 0
+    let current = this.head
     if (!current) {
-      throw new Error("Index out of range");
+      throw new Error('Index out of range')
     }
 
     while (i < position) {
-      i += 1;
+      i += 1
       if (!current.next) {
-        break;
+        break
       }
-      current = current.next;
+      current = current.next
     }
 
-    return current;
+    return current
   }
 
   /**
@@ -126,24 +126,24 @@ export default class LinkedList<T> {
    * Space: O(1)
    */
   public last(): LNode<T> | undefined {
-    let current = this.head;
+    let current = this.head
 
     if (!current) {
-      return;
+      return
     }
 
     while (current && current.next) {
-      current = current.next;
+      current = current.next
     }
 
-    return current;
+    return current
   }
 
   public toArray(): T[] {
     if (!this.head) {
-      return [];
+      return []
     }
-    return toArray(this.head);
+    return toArray(this.head)
   }
 }
 
@@ -155,14 +155,14 @@ export default class LinkedList<T> {
  * Space: O(N)
  */
 export function fromArray<T>(arr: T[]): LinkedList<T> {
-  const ll = new LinkedList<T>();
+  const ll = new LinkedList<T>()
 
   for (let i = arr.length - 1; i >= 0; i -= 1) {
-    const v = arr[i];
-    ll.prepend(v);
+    const v = arr[i]
+    ll.prepend(v)
   }
 
-  return ll;
+  return ll
 }
 
 /**
@@ -173,13 +173,13 @@ export function fromArray<T>(arr: T[]): LinkedList<T> {
  * Space: O(N)
  */
 export function toArray<T>(head: LNode<T>): T[] {
-  const res: T[] = [];
+  const res: T[] = []
 
-  let current: LNode<T> | undefined = head;
+  let current: LNode<T> | undefined = head
   while (current) {
-    res.push(current.value);
-    current = current.next;
+    res.push(current.value)
+    current = current.next
   }
 
-  return res;
+  return res
 }
