@@ -1,6 +1,5 @@
 {
-  "name": "tsepi",
-  "version": "1.0.0",
+  "name": "tsepi", "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -26,8 +25,6 @@
     "@types/jest": "^24.0.13",
     "@types/jest-expect-message": "^1.0.0",
     "@types/node": "^12.0.2",
-    "@typescript-eslint/eslint-plugin": "^2.2.0",
-    "@typescript-eslint/parser": "^2.2.0",
     "jest": "^24.8.0",
     "jest-expect-message": "^1.0.2",
     "standard": "^14.3.0",
