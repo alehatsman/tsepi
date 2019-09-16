@@ -84,6 +84,9 @@ export function parity4(x: number): number {
  * parity5
  * Use property of parity and xor. Because it is associative
  * we can calc parity as parity of bin parts.
+ *
+ * Time: O(log n), n - number of bits
+ * Space: O(1)
  */
 export function parity5(x: number): number {
   x ^= x >> 16
