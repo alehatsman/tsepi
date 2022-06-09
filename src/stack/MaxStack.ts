@@ -1,4 +1,4 @@
-import LinkedList from '@/lists/LinkedList'
+import { LinkedList } from '@/std/collections/LinkedList'
 
 /**
  * MaxStack implementation using linked lists.

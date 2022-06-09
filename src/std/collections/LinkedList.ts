@@ -1,6 +1,13 @@
-import LNode from './Node'
+export class LNode<T> {
+  public value: T
+  public next?: LNode<T>
 
-export default class LinkedList<T> {
+  constructor (value: T) {
+    this.value = value
+  }
+}
+
+export class LinkedList<T> {
   public head?: LNode<T>
 
   /**

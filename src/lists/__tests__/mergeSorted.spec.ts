@@ -1,6 +1,5 @@
-import { fromArray, toArray } from '@/lists/LinkedList'
+import { fromArray, toArray, LNode } from '@/std/collections/LinkedList'
 import mergeSorted from '@/lists/mergeSorted'
-import LNode from '@/lists/Node'
 
 describe('mergeSorted', () => {
   it('should return empty list for empty input', () => {

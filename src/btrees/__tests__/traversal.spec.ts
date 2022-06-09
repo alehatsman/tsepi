@@ -1,4 +1,4 @@
-import BTree from '@/btrees/BTree'
+import BTree from '@/std/collections/BTree'
 import printInOrder from '@/btrees/traversal'
 
 test('printInOrder', () => {

@@ -1,4 +1,4 @@
-import BTree from '@/btrees/BTree'
+import BTree from '@/std/collections/BTree'
 
 function printInOrder<T> (btree: BTree<T>): T[] {
   let current: BTree<T> | null = btree

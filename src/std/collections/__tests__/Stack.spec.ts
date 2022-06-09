@@ -1,4 +1,4 @@
-import Stack from '@/stack/Stack'
+import Stack from '@/std/collections/Stack'
 
 describe('Stack', () => {
   it('should support push and pop', () => {

@@ -1,5 +1,4 @@
-import LinkedList, { fromArray } from '@/lists/LinkedList'
-import LNode from '@/lists/Node'
+import { LinkedList, LNode, fromArray } from '@/std/collections/LinkedList'
 
 describe('LinkedList', () => {
   test('toArray', () => {

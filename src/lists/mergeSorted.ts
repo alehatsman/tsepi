@@ -1,4 +1,4 @@
-import LNode from './Node'
+import { LNode } from '@/std/collections/LinkedList'
 
 /**
  * Merges two sorted linked lists and creates a new linked list.
