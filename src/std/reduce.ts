@@ -5,7 +5,7 @@
  *
  * @param reducer - reducer function.
  * @param coll - collection for reduce.
- * @param acc - default value for accumulator.
+ * @param accDefault - default value for accumulator.
  *
  * @returns acc - accumulated value.
  */

@@ -7,7 +7,9 @@
     "lint": "tslint --project ./",
     "lint:fix": "tslint --project ./ --fix",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:stryker": "stryker run"
   },
   "standard": {
     "parser": "@typescript-eslint/parser",

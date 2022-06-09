@@ -6,7 +6,7 @@ type Iteratee<A, B> = (x: A, i: number) => B
  * The iteratee function is invoked with two arguments: (value, index).
  *
  * @param iteratee - function to invoke on each element.
- * @param call - collection to iterate through.
+ * @param coll - collection to iterate through.
  *
  * @returns collection - collection with transformed values.
  */
