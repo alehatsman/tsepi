@@ -7,7 +7,7 @@ function memo (fn: any): any {
       return cache.get(key)
     }
 
-    const res = fn.apply(null, args)
+    const res = fn.call(null, ...args)
     cache.set(key, res)
     return res
   }

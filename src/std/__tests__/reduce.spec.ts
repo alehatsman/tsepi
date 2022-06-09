@@ -17,7 +17,7 @@ test('reduce', () => {
   ]
 
   forEach((testCase) => {
-    // @ts-expect-error
+    // @ts-expect-error ts-message: Expected 2 arguments, but got 3.
     expect(testCase.res).toEqual(reduce(...testCase.args))
   }, testCases)
 })

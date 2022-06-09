@@ -1,7 +1,7 @@
 import BTree from '@/btrees/BTree'
 
 function printInOrder<T> (btree: BTree<T>): T[] {
-  let current: BTree<T> | undefined = btree
+  let current: BTree<T> | null = btree
   let leftDone = false
 
   const res = []
@@ -16,7 +16,6 @@ function printInOrder<T> (btree: BTree<T>): T[] {
     res.push(current.value)
 
     leftDone = true
-
     if (current.right != null) {
       leftDone = false
       current = current.right
