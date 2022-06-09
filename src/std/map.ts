@@ -10,7 +10,7 @@ type Iteratee<A, B> = (x: A, i: number) => B
  *
  * @returns collection - collection with transformed values.
  */
-export default function map<A, B>(iteratee: Iteratee<A, B>, coll: A[]): B[] {
+export default function map<A, B> (iteratee: Iteratee<A, B>, coll: A[]): B[] {
   const result: B[] = []
   for (let i = 0; i < coll.length; i += 1) {
     const x = coll[i]

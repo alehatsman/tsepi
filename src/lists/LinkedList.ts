@@ -13,7 +13,7 @@ export default class LinkedList<T> {
    * Time: O(P)
    * Space: O(1)
    */
-  public insert(value: T, position: number) {
+  public insert (value: T, position: number) {
     const newNode = new LNode(value)
 
     if (position === 0) {
@@ -22,14 +22,14 @@ export default class LinkedList<T> {
       return
     }
 
-    if (!this.head) {
+    if (this.head == null) {
       throw new Error('index out of range error')
     }
 
     let i = 0
     let current: LNode<T> | undefined = this.head
     let prev: LNode<T> = current
-    while (current && i < position) {
+    while ((current != null) && i < position) {
       i += 1
       prev = current
       current = current.next
@@ -48,7 +48,7 @@ export default class LinkedList<T> {
    * Time: O(1)
    * Space: O(1)
    */
-  public prepend(value: T) {
+  public prepend (value: T) {
     this.insert(value, 0)
   }
 
@@ -61,18 +61,18 @@ export default class LinkedList<T> {
    * Time: O(N)
    * Space: O(1)
    */
-  public append(value: T) {
+  public append (value: T) {
     const newNode = new LNode(value)
     const lastNode = this.last()
-    if (!lastNode) {
+    if (lastNode == null) {
       this.head = newNode
       return
     }
     lastNode.next = newNode
   }
 
-  public remove(position: number) {
-    if (!this.head) {
+  public remove (position: number) {
+    if (this.head == null) {
       throw new Error('No head')
     }
 
@@ -82,7 +82,7 @@ export default class LinkedList<T> {
     }
 
     const node = this.index(position)
-    if (node && node.next) {
+    if ((node != null) && (node.next != null)) {
       node.next = node.next.next
     }
   }
@@ -96,20 +96,20 @@ export default class LinkedList<T> {
    * Time: O(N)
    * Space: O(1)
    */
-  public index(position: number): LNode<T> | undefined {
+  public index (position: number): LNode<T> | undefined {
     if (position === 0) {
       return this.head
     }
 
     let i = 0
     let current = this.head
-    if (!current) {
+    if (current == null) {
       throw new Error('Index out of range')
     }
 
     while (i < position) {
       i += 1
-      if (!current.next) {
+      if (current.next == null) {
         break
       }
       current = current.next
@@ -125,22 +125,22 @@ export default class LinkedList<T> {
    * Time: O(N)
    * Space: O(1)
    */
-  public last(): LNode<T> | undefined {
+  public last (): LNode<T> | undefined {
     let current = this.head
 
-    if (!current) {
+    if (current == null) {
       return
     }
 
-    while (current && current.next) {
+    while (current && (current.next != null)) {
       current = current.next
     }
 
     return current
   }
 
-  public toArray(): T[] {
-    if (!this.head) {
+  public toArray (): T[] {
+    if (this.head == null) {
       return []
     }
     return toArray(this.head)
@@ -154,7 +154,7 @@ export default class LinkedList<T> {
  * Time: O(N)
  * Space: O(N)
  */
-export function fromArray<T>(arr: T[]): LinkedList<T> {
+export function fromArray<T> (arr: T[]): LinkedList<T> {
   const ll = new LinkedList<T>()
 
   for (let i = arr.length - 1; i >= 0; i -= 1) {
@@ -172,11 +172,11 @@ export function fromArray<T>(arr: T[]): LinkedList<T> {
  * Time: O(N)
  * Space: O(N)
  */
-export function toArray<T>(head: LNode<T>): T[] {
+export function toArray<T> (head: LNode<T>): T[] {
   const res: T[] = []
 
   let current: LNode<T> | undefined = head
-  while (current) {
+  while (current != null) {
     res.push(current.value)
     current = current.next
   }

@@ -3,7 +3,7 @@
  * @param x - number
  * @return number of bits
  */
-function countBits(x: number): number {
+function countBits (x: number): number {
   let n = 0
   while (x > 0) {
     n += x & 1

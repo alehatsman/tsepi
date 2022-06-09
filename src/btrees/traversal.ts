@@ -1,6 +1,6 @@
 import BTree from '@/btrees/BTree'
 
-function printInOrder<T>(btree: BTree<T>): T[] {
+function printInOrder<T> (btree: BTree<T>): T[] {
   let current: BTree<T> | undefined = btree
   let leftDone = false
 
@@ -8,7 +8,7 @@ function printInOrder<T>(btree: BTree<T>): T[] {
 
   while (current) {
     if (!leftDone) {
-      while (current.left) {
+      while (current.left != null) {
         current = current.left
       }
     }
@@ -17,15 +17,15 @@ function printInOrder<T>(btree: BTree<T>): T[] {
 
     leftDone = true
 
-    if (current.right) {
+    if (current.right != null) {
       leftDone = false
       current = current.right
-    } else if (current.root) {
-      while (current.root && current === current.root.right) {
+    } else if (current.root != null) {
+      while ((current.root != null) && current === current.root.right) {
         current = current.root
       }
 
-      if (!current.root) {
+      if (current.root == null) {
         break
       }
 

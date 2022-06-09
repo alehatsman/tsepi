@@ -4,7 +4,7 @@ export default class BTree<T> {
   public left: BTree<T> | undefined
   public right: BTree<T> | undefined
 
-  constructor(value: T) {
+  constructor (value: T) {
     this.value = value
   }
 }

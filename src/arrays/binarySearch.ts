@@ -8,7 +8,7 @@
  * Time: O(log N)
  * Space: O(1)
  */
-export default function binarySearch<T>(arr: T[], item: T): number {
+export default function binarySearch<T> (arr: T[], item: T): number {
   let left = 0
   let right = arr.length - 1
 

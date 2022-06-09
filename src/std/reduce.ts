@@ -9,8 +9,8 @@
  *
  * @returns acc - accumulated value.
  */
-export default function reduce<A, B>(reducer: (acc: B, item: A) => B, coll: A[], accDefault?: B): B {
-  if (!accDefault) {
+export default function reduce<A, B> (reducer: (acc: B, item: A) => B, coll: A[], accDefault?: B): B {
+  if (accDefault == null) {
     const [head, ...tail] = coll
     return reduce(reducer, tail, (head as unknown) as B)
   }

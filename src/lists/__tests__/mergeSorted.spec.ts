@@ -14,7 +14,7 @@ describe('mergeSorted', () => {
     const ll1 = fromArray([2, 5, 7])
     const ll2 = fromArray([3, 11])
 
-    if (ll1.head && ll2.head) {
+    if ((ll1.head != null) && (ll2.head != null)) {
       const mll = mergeSorted(ll1.head, ll2.head)
       expect(toArray(mll)).toEqual([2, 3, 5, 7, 11])
     }

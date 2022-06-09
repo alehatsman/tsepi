@@ -9,18 +9,18 @@ import LinkedList from '@/lists/LinkedList'
  * Space: O(2N)
  */
 export default class MaxStack<T> {
-  private ll: LinkedList<T>
-  private ml: LinkedList<T>
+  private readonly ll: LinkedList<T>
+  private readonly ml: LinkedList<T>
 
-  constructor() {
+  constructor () {
     this.ll = new LinkedList()
     this.ml = new LinkedList()
   }
 
-  public push(item: T) {
+  public push (item: T) {
     this.ll.prepend(item)
 
-    if (!this.ml.head) {
+    if (this.ml.head == null) {
       this.ml.prepend(item)
       return
     }
@@ -32,8 +32,8 @@ export default class MaxStack<T> {
     }
   }
 
-  public pop(): T {
-    if (!this.ll.head || !this.ml.head) {
+  public pop (): T {
+    if ((this.ll.head == null) || (this.ml.head == null)) {
       throw new Error('StackIsEmptyError')
     }
 
@@ -44,8 +44,8 @@ export default class MaxStack<T> {
     return value
   }
 
-  public max(): T {
-    if (!this.ml.head) {
+  public max (): T {
+    if (this.ml.head == null) {
       throw new Error('StackIsEmptyError')
     }
 

@@ -12,7 +12,7 @@ import { swap } from '@/std'
  * Time: O(N)
  * Space: O(1)
  */
-function rearrange<T>(arr: T[], i: number): void {
+function rearrange<T> (arr: T[], i: number): void {
   const x = arr[i]
   let [p, q, r] = [0, 0, arr.length - 1]
   while (q <= r) {

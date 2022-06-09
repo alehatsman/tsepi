@@ -2,11 +2,11 @@ import { filter, reduce } from '@/std'
 
 const letterOnlyRegex = new RegExp('[A-Za-z]')
 
-function isLetter(ch: string) {
+function isLetter (ch: string) {
   return letterOnlyRegex.test(ch)
 }
 
-function splitText(text: string) {
+function splitText (text: string) {
   const allLetters = text.split('')
   const onlyTextLetters = filter((ch) => {
     return !!ch && isLetter(ch)
@@ -14,7 +14,7 @@ function splitText(text: string) {
   return onlyTextLetters
 }
 
-function countLetters(letters: string[]) {
+function countLetters (letters: string[]) {
   return reduce(
     (acc, ch) => {
       if (!acc[ch]) {
@@ -24,13 +24,13 @@ function countLetters(letters: string[]) {
       return acc
     },
     letters,
-    {} as { [key: string]: number },
+    {} as { [key: string]: number }
   )
 }
 
-export default function anonymousLetter(
+export default function anonymousLetter (
   letter: string,
-  magazine: string,
+  magazine: string
 ): boolean {
   const letterLetters = splitText(letter)
   const magazineLetters = splitText(magazine)

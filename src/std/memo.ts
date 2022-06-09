@@ -1,4 +1,4 @@
-function memo(fn: any): any {
+function memo (fn: any): any {
   const cache = new Map()
 
   return (...args: any[]) => {

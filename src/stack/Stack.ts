@@ -6,9 +6,9 @@ import LinkedList from '@/lists/LinkedList'
  * Space: O(N)
  */
 export default class Stack<T> {
-  private ll: LinkedList<T>
+  private readonly ll: LinkedList<T>
 
-  constructor() {
+  constructor () {
     this.ll = new LinkedList()
   }
 
@@ -18,7 +18,7 @@ export default class Stack<T> {
    * Time: O(1)
    * Space: O(1)
    */
-  public push(value: T) {
+  public push (value: T) {
     this.ll.prepend(value)
   }
 
@@ -28,8 +28,8 @@ export default class Stack<T> {
    * Time: O(1)
    * Space: O(1)
    */
-  public pop(): T {
-    if (!this.ll.head) {
+  public pop (): T {
+    if (this.ll.head == null) {
       throw new Error('StackIsEmptyError')
     }
 

@@ -6,7 +6,7 @@
  * Time: O(logN)
  * Space: O(1)
  */
-export default function binarySearch<T>(x: T, coll: T[]): number {
+export default function binarySearch<T> (x: T, coll: T[]): number {
   let [l, r] = [0, coll.length - 1]
 
   while (l <= r) {

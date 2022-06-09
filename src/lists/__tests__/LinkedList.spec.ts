@@ -43,7 +43,7 @@ describe('LinkedList', () => {
     ll.append(2)
     ll.append(3)
     const last = ll.last()
-    if (!last) {
+    if (last == null) {
       done.fail()
       return
     }
@@ -58,21 +58,21 @@ describe('LinkedList', () => {
     ll.append(3)
 
     const n0 = ll.index(0)
-    if (!n0) {
+    if (n0 == null) {
       done.fail()
       return
     }
     expect(1).toEqual(n0.value)
 
     const n1 = ll.index(1)
-    if (!n1) {
+    if (n1 == null) {
       done.fail()
       return
     }
     expect(2).toEqual(n1.value)
 
     const n2 = ll.index(2)
-    if (!n2) {
+    if (n2 == null) {
       done.fail()
       return
     }
@@ -85,7 +85,7 @@ describe('LinkedList', () => {
 test('fromArray', () => {
   const ll = fromArray([1, 2, 3])
 
-  if (ll.head) {
+  if (ll.head != null) {
     expect(ll.head.value).toBe(1)
   }
 })

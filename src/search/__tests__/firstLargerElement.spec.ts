@@ -1,7 +1,7 @@
 import firstLargerElement from '@/search/firstLargerElement'
 import { forEach } from '@/std'
 
-function createBigArray() {
+function createBigArray () {
   const res = []
   for (let i = 0; i <= 1000; i += 1) {
     res.push(i)
@@ -18,7 +18,7 @@ test('firstLargerElement', () => {
     { coll, x: 1, index: 2 },
     { coll, x: 284, index: 6 },
     { coll, x: 399, index: 8 },
-    { coll: createBigArray(), x: 3, index: 4 },
+    { coll: createBigArray(), x: 3, index: 4 }
   ]
 
   forEach(({ coll, x, index }) => {

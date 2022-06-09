@@ -6,7 +6,7 @@
  * Time: O(logN)
  * Space: O(1)
  */
-function firstLargerElement<T>(x: T, coll: T[]): number {
+function firstLargerElement<T> (x: T, coll: T[]): number {
   let [l, r] = [0, coll.length - 1]
 
   if (r === -1 || coll[r] <= x) {

@@ -1,4 +1,4 @@
-export function bin(x: number, size?: number): string {
+export function bin (x: number, size?: number): string {
   let r = x.toString(2)
   if (!size) {
     return r
@@ -11,14 +11,14 @@ export function bin(x: number, size?: number): string {
   return r
 }
 
-export function bin2dec(x: string): number {
+export function bin2dec (x: string): number {
   return parseInt(x, 2)
 }
 
-export function hex(x: number): string {
+export function hex (x: number): string {
   return x.toString(16)
 }
 
-export function hex2dec(x: string): number {
+export function hex2dec (x: string): number {
   return parseInt(x, 16)
 }

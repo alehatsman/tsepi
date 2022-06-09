@@ -8,7 +8,7 @@ import map from './map'
  *
  * @returns array - array of arrays of size 2.
  */
-function zip<A, B>(arr1: A[], arr2: B[]) {
+function zip<A, B> (arr1: A[], arr2: B[]) {
   return map((v, i) => {
     return [v, arr2[i]]
   }, arr1)
